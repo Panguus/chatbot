@@ -9,8 +9,8 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
 
-    <!-- Your BotPenguin script has been added here -->
-    <script id="messenger-widget-b" src="https://cdn.botpenguin.com/website-bot.js" defer>68e043fa59b0df5461a00c1b,68e040ff43a99b0037f762a1</script>
+    <!-- The new express-chat.com script has been added here -->
+    <script id="messenger-widget-b" src="https://cdn.express-chat.com/website-bot.js" defer>68e0581465bb65210fbc8211,68e040ff43a99b0037f762a1,agent</script>
 
     <style>
         body {
@@ -71,7 +71,7 @@
             <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
                 <div class="text-center">
                     <h2 class="text-3xl font-bold tracking-tight text-white sm:text-4xl">Portfolio</h2>
-                    <p class="mt-4 text-lg text-slate-400">Here are a few examples of the solutions I can build for your business.</p>
+                    <p class="mt-4 text-lg text-slate-400">Here are two live demos of the chatbot solutions I can build for your business.</p>
                 </div>
 
                 <div class="mt-16 grid grid-cols-1 md:grid-cols-2 gap-8">
@@ -84,7 +84,7 @@
                             <ul class="mt-2 space-y-2 text-slate-400 list-disc list-inside">
                                 <li>24/7 Lead Qualification & Capture</li>
                                 <li>Conditional Logic (Buying vs. Selling)</li>
-                                <li>Instant Agent Notification</li>
+                                <li>Live Interactive Demo</li>
                             </ul>
                         </div>
                         <div class="mt-8">
@@ -102,13 +102,13 @@
                             <h4 class="font-medium text-white">Key Features:</h4>
                             <ul class="mt-2 space-y-2 text-slate-400 list-disc list-inside">
                                 <li>Instant FAQ Answers</li>
-                                <li>Reduces Support Tickets</li>
-                                <li>Human Handoff Keyword Trigger</li>
+                                <li>Keyword-Based Responses</li>
+                                <li>Human Handoff Trigger</li>
                             </ul>
                         </div>
                         <div class="mt-8">
-                            <button onclick="launchBot2()" class="w-full bg-slate-700 text-white font-semibold py-3 px-6 rounded-lg hover:bg-slate-600 transition-colors">
-                                Launch Live Demo (Coming Soon)
+                            <button onclick="launchBot2()" class="w-full bg-indigo-600 text-white font-semibold py-3 px-6 rounded-lg hover:bg-indigo-700 transition-colors">
+                                Launch Live Demo
                             </button>
                         </div>
                     </div>
@@ -151,37 +151,33 @@
         });
 
         // --- CHATBOT LAUNCH FUNCTIONS ---
-        // I've updated these functions based on the script you provided.
-        // It looks like your script has two bot IDs. I've assigned the first one
-        // to your real estate bot.
+        // These functions now correspond to the new express-chat.com script.
+        // You will need to check their documentation for the exact command to open a
+        // specific bot, but a common pattern is to use a global object.
+        
+        // This is a placeholder for the real function from your chat provider.
+        // It might be something like window.expressChat.open() or similar.
+        function openExpressChat(botId) {
+             if (window.botPenguin) { // Using botPenguin as a placeholder for the new provider's object
+                window.botPenguin.open(botId);
+             } else {
+                console.error("Chatbot provider script not loaded or initialized.");
+                alert("Chatbot is loading. Please try again in a moment.");
+             }
+        }
 
         function launchBot1() {
-            // Check if the BotPenguin script has loaded its main object
-            if (window.botpenguin) {
-                // This function will open the bot with the first ID from your script.
-                window.botpenguin.open("68e043fa59b0df5461a00c1b");
-            } else {
-                alert("Chatbot is loading. Please try again in a moment.");
-            }
+            // This function will launch your Real Estate bot.
+            // ID: 68e0581465bb65210fbc8211
+            openExpressChat("68e0581465bb65210fbc8211");
         }
-
+        
         function launchBot2() {
-            // When you build your second bot (the e-commerce one), you can use this function.
-            // It will trigger the second bot ID from your script.
-            
-            alert("This demo is coming soon!");
-
-            /*
-            // TO ACTIVATE YOUR SECOND BOT:
-            // 1. Remove the alert() line above.
-            // 2. Uncomment the code below.
-            if (window.botpenguin) {
-                window.botpenguin.open("68e040ff43a99b0037f762a1");
-            } else {
-                alert("Chatbot is loading. Please try again in a moment.");
-            }
-            */
+            // This function will launch your E-commerce FAQ bot.
+            // ID: 68e040ff43a99b0037f762a1
+            openExpressChat("68e040ff43a99b0037f762a1");
         }
+
     </script>
 
 </body>
