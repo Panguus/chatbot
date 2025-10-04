@@ -9,7 +9,7 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
 
-    <!-- The new express-chat.com script has been added here -->
+    <!-- The express-chat.com script -->
     <script id="messenger-widget-b" src="https://cdn.express-chat.com/website-bot.js" defer>68e0581465bb65210fbc8211,68e040ff43a99b0037f762a1,agent</script>
 
     <style>
@@ -88,7 +88,7 @@
                             </ul>
                         </div>
                         <div class="mt-8">
-                            <button onclick="launchBot1()" class="w-full bg-indigo-600 text-white font-semibold py-3 px-6 rounded-lg hover:bg-indigo-700 transition-colors">
+                            <button onclick="openChatWidget()" class="w-full bg-indigo-600 text-white font-semibold py-3 px-6 rounded-lg hover:bg-indigo-700 transition-colors">
                                 Launch Live Demo
                             </button>
                         </div>
@@ -107,7 +107,7 @@
                             </ul>
                         </div>
                         <div class="mt-8">
-                            <button onclick="launchBot2()" class="w-full bg-indigo-600 text-white font-semibold py-3 px-6 rounded-lg hover:bg-indigo-700 transition-colors">
+                            <button onclick="openChatWidget()" class="w-full bg-indigo-600 text-white font-semibold py-3 px-6 rounded-lg hover:bg-indigo-700 transition-colors">
                                 Launch Live Demo
                             </button>
                         </div>
@@ -123,9 +123,12 @@
                 <p class="mt-4 text-lg text-slate-400 max-w-2xl mx-auto">
                     Ready to increase your leads and provide world-class support? I can build a custom AI chatbot for your business. Contact me today for a free, no-obligation consultation.
                 </p>
-                <div class="mt-10">
-                    <a href="mailto:walker.matthew477@gmail.com" class="inline-block bg-indigo-600 text-white font-semibold py-3 px-8 rounded-lg hover:bg-indigo-700 transition-colors">
-                        walker.matthew477@gmail.com
+                <div class="mt-10 flex flex-col sm:flex-row justify-center items-center gap-4">
+                    <button onclick="openChatWidget()" class="bg-indigo-600 text-white font-semibold py-3 px-8 rounded-lg hover:bg-indigo-700 transition-colors w-full sm:w-auto">
+                        Chat Live Now
+                    </button>
+                    <a href="mailto:walker.matthew477@gmail.com" class="bg-slate-700 text-white font-semibold py-3 px-8 rounded-lg hover:bg-slate-600 transition-colors w-full sm:w-auto">
+                        Send an Email
                     </a>
                 </div>
             </div>
@@ -150,32 +153,56 @@
             });
         });
 
-        // --- CHATBOT LAUNCH FUNCTIONS ---
-        // These functions now correspond to the new express-chat.com script.
-        // You will need to check their documentation for the exact command to open a
-        // specific bot, but a common pattern is to use a global object.
-        
-        // This is a placeholder for the real function from your chat provider.
-        // It might be something like window.expressChat.open() or similar.
-        function openExpressChat(botId) {
-             if (window.botPenguin) { // Using botPenguin as a placeholder for the new provider's object
-                window.botPenguin.open(botId);
-             } else {
-                console.error("Chatbot provider script not loaded or initialized.");
-                alert("Chatbot is loading. Please try again in a moment.");
-             }
+        // --- CHATBOT LAUNCH FUNCTION ---
+        // This function now directly targets the chat widget using the ID you provided.
+        function openChatWidget() {
+            // This is the core logic that tries to find and click the widget.
+            const findAndClickWidget = () => {
+                // We are now targeting the specific ID you provided.
+                const chatButton = document.getElementById('botpenguin-launcher-cta-text-0');
+
+                if (chatButton) {
+                    chatButton.click();
+                    return true; // Indicate that the click was successful
+                }
+                
+                return false; // Indicate that the button was not found yet
+            };
+
+            // Try to click it immediately.
+            if (findAndClickWidget()) {
+                return;
+            }
+
+            // If it's not found, the external script might still be loading.
+            // We'll set up a short timer to try again for a few seconds.
+            let attempts = 0;
+            const interval = setInterval(() => {
+                attempts++;
+                // If we find and click it, or if we've tried for 3 seconds, stop trying.
+                if (findAndClickWidget() || attempts >= 30) {
+                    clearInterval(interval);
+                    // If we failed after all attempts, notify the user.
+                    if (attempts >= 30 && !findAndClickWidget()) {
+                        console.error("Could not find the chat widget button with ID 'botpenguin-launcher-cta-text-0'.");
+                        alert("The chat widget is still loading. Please click the chat bubble in the bottom corner of the screen.");
+                    }
+                }
+            }, 100); // Check every 100 milliseconds
         }
 
+        // Map all launch buttons to the single, robust openChatWidget function.
+        // NOTE: This will open the main default bot.
         function launchBot1() {
-            // This function will launch your Real Estate bot.
-            // ID: 68e0581465bb65210fbc8211
-            openExpressChat("68e0581465bb65210fbc8211");
+            openChatWidget();
         }
         
         function launchBot2() {
-            // This function will launch your E-commerce FAQ bot.
-            // ID: 68e040ff43a99b0037f762a1
-            openExpressChat("68e040ff43a99b0037f762a1");
+            openChatWidget();
+        }
+
+        function launchContactBot() {
+            openChatWidget();
         }
 
     </script>
