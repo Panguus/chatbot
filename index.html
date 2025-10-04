@@ -70,46 +70,36 @@
         <section id="portfolio" class="py-20 sm:py-24 bg-slate-900/50">
             <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
                 <div class="text-center">
-                    <h2 class="text-3xl font-bold tracking-tight text-white sm:text-4xl">Portfolio</h2>
-                    <p class="mt-4 text-lg text-slate-400">Here are two live demos of the chatbot solutions I can build for your business.</p>
+                    <h2 class="text-3xl font-bold tracking-tight text-white sm:text-4xl">Solutions</h2>
+                    <p class="mt-4 text-lg text-slate-400">I build intelligent chatbot solutions to solve your biggest business challenges.</p>
                 </div>
 
                 <div class="mt-16 grid grid-cols-1 md:grid-cols-2 gap-8">
-                    <!-- Project 1: Real Estate Bot -->
+                    <!-- Solution 1: Lead Generation -->
                     <div class="bg-slate-800/50 border border-slate-700 rounded-2xl p-8 flex flex-col">
-                        <h3 class="text-2xl font-semibold text-white">Real Estate Lead Generation Bot</h3>
-                        <p class="mt-4 text-slate-400 flex-grow">This demo showcases a chatbot designed to engage website visitors, qualify them as buying or selling leads, and capture their contact information for an agent to follow up. It acts as a 24/7 digital assistant for real estate professionals.</p>
+                        <h3 class="text-2xl font-semibold text-white">Lead Generation Bots</h3>
+                        <p class="mt-4 text-slate-400 flex-grow">Don't let website visitors leave without a conversation. My lead generation bots engage every potential customer, qualify them based on their needs, and capture their contact information so your sales team never misses an opportunity.</p>
                         <div class="mt-6">
                             <h4 class="font-medium text-white">Key Features:</h4>
                             <ul class="mt-2 space-y-2 text-slate-400 list-disc list-inside">
-                                <li>24/7 Lead Qualification & Capture</li>
-                                <li>Conditional Logic (Buying vs. Selling)</li>
-                                <li>Live Interactive Demo</li>
+                                <li>24/7 Automated Lead Capture</li>
+                                <li>Visitor Qualification Funnels</li>
+                                <li>Seamless CRM Integration</li>
                             </ul>
-                        </div>
-                        <div class="mt-8">
-                            <button onclick="openChatWidget()" class="w-full bg-indigo-600 text-white font-semibold py-3 px-6 rounded-lg hover:bg-indigo-700 transition-colors">
-                                Launch Live Demo
-                            </button>
                         </div>
                     </div>
 
-                    <!-- Project 2: E-commerce FAQ Bot -->
+                    <!-- Solution 2: Automated Support -->
                     <div class="bg-slate-800/50 border border-slate-700 rounded-2xl p-8 flex flex-col">
-                        <h3 class="text-2xl font-semibold text-white">E-commerce FAQ & Support Bot</h3>
-                        <p class="mt-4 text-slate-400 flex-grow">This demo shows a support bot for an online store. It's trained to instantly answer common questions about shipping, returns, and order status, reducing support tickets and improving customer satisfaction.</p>
+                        <h3 class="text-2xl font-semibold text-white">Automated Support Bots</h3>
+                        <p class="mt-4 text-slate-400 flex-grow">Free up your team from answering the same questions over and over. My support bots provide instant, accurate answers to frequently asked questions, guide users to help articles, and can escalate complex issues to a human agent.</p>
                         <div class="mt-6">
                             <h4 class="font-medium text-white">Key Features:</h4>
                             <ul class="mt-2 space-y-2 text-slate-400 list-disc list-inside">
-                                <li>Instant FAQ Answers</li>
-                                <li>Keyword-Based Responses</li>
-                                <li>Human Handoff Trigger</li>
+                                <li>Instant FAQ Answering</li>
+                                <li>Reduced Support Ticket Volume</li>
+                                <li>Intelligent Human Handoff</li>
                             </ul>
-                        </div>
-                        <div class="mt-8">
-                            <button onclick="openChatWidget()" class="w-full bg-indigo-600 text-white font-semibold py-3 px-6 rounded-lg hover:bg-indigo-700 transition-colors">
-                                Launch Live Demo
-                            </button>
                         </div>
                     </div>
                 </div>
@@ -121,7 +111,7 @@
             <div class="max-w-4xl mx-auto text-center px-4 sm:px-6 lg:px-8">
                 <h2 class="text-3xl font-bold tracking-tight text-white sm:text-4xl">Let's Work Together</h2>
                 <p class="mt-4 text-lg text-slate-400 max-w-2xl mx-auto">
-                    Ready to increase your leads and provide world-class support? I can build a custom AI chatbot for your business. Contact me today for a free, no-obligation consultation.
+                    Ready to increase your leads and provide world-class support? Let's chat live and see how a custom AI chatbot can work for your business.
                 </p>
                 <div class="mt-10 flex flex-col sm:flex-row justify-center items-center gap-4">
                     <button onclick="openChatWidget()" class="bg-indigo-600 text-white font-semibold py-3 px-8 rounded-lg hover:bg-indigo-700 transition-colors w-full sm:w-auto">
@@ -154,57 +144,33 @@
         });
 
         // --- CHATBOT LAUNCH FUNCTION ---
-        // This function now directly targets the chat widget using the ID you provided.
+        // This function directly targets the chat widget using the ID you provided.
         function openChatWidget() {
-            // This is the core logic that tries to find and click the widget.
             const findAndClickWidget = () => {
-                // We are now targeting the specific ID you provided.
                 const chatButton = document.getElementById('botpenguin-launcher-cta-text-0');
-
                 if (chatButton) {
                     chatButton.click();
-                    return true; // Indicate that the click was successful
+                    return true;
                 }
-                
-                return false; // Indicate that the button was not found yet
+                return false;
             };
 
-            // Try to click it immediately.
             if (findAndClickWidget()) {
                 return;
             }
-
-            // If it's not found, the external script might still be loading.
-            // We'll set up a short timer to try again for a few seconds.
+            
             let attempts = 0;
             const interval = setInterval(() => {
                 attempts++;
-                // If we find and click it, or if we've tried for 3 seconds, stop trying.
                 if (findAndClickWidget() || attempts >= 30) {
                     clearInterval(interval);
-                    // If we failed after all attempts, notify the user.
                     if (attempts >= 30 && !findAndClickWidget()) {
                         console.error("Could not find the chat widget button with ID 'botpenguin-launcher-cta-text-0'.");
                         alert("The chat widget is still loading. Please click the chat bubble in the bottom corner of the screen.");
                     }
                 }
-            }, 100); // Check every 100 milliseconds
+            }, 100);
         }
-
-        // Map all launch buttons to the single, robust openChatWidget function.
-        // NOTE: This will open the main default bot.
-        function launchBot1() {
-            openChatWidget();
-        }
-        
-        function launchBot2() {
-            openChatWidget();
-        }
-
-        function launchContactBot() {
-            openChatWidget();
-        }
-
     </script>
 
 </body>
