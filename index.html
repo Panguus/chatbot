@@ -12,11 +12,11 @@
     <style>
         body {
             font-family: 'Inter', sans-serif;
-            background-color: #18181b; /* zinc-900 */
-            color: #d4d4d8; /* zinc-300 */
+            background-color: #f8fafc; /* slate-50 */
+            color: #475569; /* slate-600 */
         }
         .gradient-text {
-            background: linear-gradient(to right, #f97316, #fbbf24); /* orange-500 to amber-400 */
+            background: linear-gradient(to right, #0ea5e9, #22d3ee); /* sky-500 to cyan-400 */
             -webkit-background-clip: text;
             -webkit-text-fill-color: transparent;
         }
@@ -33,7 +33,7 @@
 <body class="antialiased">
 
     <!-- Header -->
-    <header class="bg-zinc-900/80 backdrop-blur-sm sticky top-0 z-50 border-b border-zinc-800">
+    <header class="bg-white/80 backdrop-blur-sm sticky top-0 z-50 border-b border-slate-200">
         <nav class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="flex items-center justify-between h-16">
                 <div class="flex items-center">
@@ -42,15 +42,15 @@
                 <!-- Desktop Menu -->
                 <div class="hidden md:block">
                     <div class="ml-10 flex items-baseline space-x-4">
-                        <a href="#services" class="text-zinc-300 hover:bg-zinc-700 hover:text-white px-3 py-2 rounded-md text-sm font-medium">Services</a>
-                        <a href="#drone-portfolio" class="text-zinc-300 hover:bg-zinc-700 hover:text-white px-3 py-2 rounded-md text-sm font-medium">Portfolio</a>
-                        <a href="#about" class="text-zinc-300 hover:bg-zinc-700 hover:text-white px-3 py-2 rounded-md text-sm font-medium">About</a>
-                        <a href="#contact" class="text-zinc-300 hover:bg-zinc-700 hover:text-white px-3 py-2 rounded-md text-sm font-medium">Contact</a>
+                        <a href="#services" class="text-slate-600 hover:bg-slate-100 hover:text-slate-900 px-3 py-2 rounded-md text-sm font-medium">Services</a>
+                        <a href="#drone-portfolio" class="text-slate-600 hover:bg-slate-100 hover:text-slate-900 px-3 py-2 rounded-md text-sm font-medium">Portfolio</a>
+                        <a href="#about" class="text-slate-600 hover:bg-slate-100 hover:text-slate-900 px-3 py-2 rounded-md text-sm font-medium">About</a>
+                        <a href="#contact" class="text-slate-600 hover:bg-slate-100 hover:text-slate-900 px-3 py-2 rounded-md text-sm font-medium">Contact</a>
                     </div>
                 </div>
                 <!-- Mobile Menu Button -->
                 <div class="md:hidden">
-                    <button id="mobile-menu-button" class="inline-flex items-center justify-center p-2 rounded-md text-zinc-400 hover:text-white hover:bg-zinc-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-offset-zinc-800 focus:ring-white">
+                    <button id="mobile-menu-button" class="inline-flex items-center justify-center p-2 rounded-md text-slate-500 hover:text-slate-900 hover:bg-slate-100 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-offset-slate-100 focus:ring-sky-500">
                         <span class="sr-only">Open main menu</span>
                         <svg id="hamburger-icon" class="block h-6 w-6" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true">
                             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
@@ -65,10 +65,10 @@
         <!-- Mobile Menu -->
         <div class="md:hidden hidden" id="mobile-menu">
             <div class="px-2 pt-2 pb-3 space-y-1 sm:px-3">
-                <a href="#services" class="mobile-menu-link text-zinc-300 hover:bg-zinc-700 hover:text-white block px-3 py-2 rounded-md text-base font-medium">Services</a>
-                <a href="#drone-portfolio" class="mobile-menu-link text-zinc-300 hover:bg-zinc-700 hover:text-white block px-3 py-2 rounded-md text-base font-medium">Portfolio</a>
-                <a href="#about" class="mobile-menu-link text-zinc-300 hover:bg-zinc-700 hover:text-white block px-3 py-2 rounded-md text-base font-medium">About</a>
-                <a href="#contact" class="mobile-menu-link text-zinc-300 hover:bg-zinc-700 hover:text-white block px-3 py-2 rounded-md text-base font-medium">Contact</a>
+                <a href="#services" class="mobile-menu-link text-slate-700 hover:bg-slate-200 hover:text-slate-900 block px-3 py-2 rounded-md text-base font-medium">Services</a>
+                <a href="#drone-portfolio" class="mobile-menu-link text-slate-700 hover:bg-slate-200 hover:text-slate-900 block px-3 py-2 rounded-md text-base font-medium">Portfolio</a>
+                <a href="#about" class="mobile-menu-link text-slate-700 hover:bg-slate-200 hover:text-slate-900 block px-3 py-2 rounded-md text-base font-medium">About</a>
+                <a href="#contact" class="mobile-menu-link text-slate-700 hover:bg-slate-200 hover:text-slate-900 block px-3 py-2 rounded-md text-base font-medium">Contact</a>
             </div>
         </div>
     </header>
@@ -78,17 +78,17 @@
         <!-- Hero Section -->
         <section id="hero" class="py-16 sm:py-20">
             <div class="max-w-4xl mx-auto text-center px-4 sm:px-6 lg:px-8">
-                <h1 class="text-4xl sm:text-5xl md:text-6xl font-bold tracking-tight text-white">
+                <h1 class="text-4xl sm:text-5xl md:text-6xl font-bold tracking-tight text-slate-900">
                     Professional <span class="gradient-text">Aerial Media</span> for Real Estate & Construction
                 </h1>
-                <p class="mt-6 text-lg sm:text-xl text-zinc-400 max-w-3xl mx-auto">
-                    As a Part 1007 certified pilot with professional experience from a major national drone company, I deliver high-impact 4K photos and cinematic video to showcase your properties and projects.
+                <p class="mt-6 text-lg sm:text-xl text-slate-600 max-w-3xl mx-auto">
+                    As a Part 107 certified pilot with professional experience from a major national drone company, I deliver high-impact 4K photos and cinematic video to showcase your properties and projects.
                 </p>
                 <div class="mt-10 flex flex-col sm:flex-row items-center justify-center gap-4">
-                    <a href="#drone-portfolio" class="bg-orange-600 text-white font-semibold py-3 px-6 rounded-lg hover:bg-orange-700 transition-colors w-full sm:w-auto">
+                    <a href="#drone-portfolio" class="bg-sky-600 text-white font-semibold py-3 px-6 rounded-lg hover:bg-sky-700 transition-colors w-full sm:w-auto shadow-lg shadow-sky-500/20">
                         See My Portfolio
                     </a>
-                    <a href="#contact" class="bg-zinc-700 text-white font-semibold py-3 px-6 rounded-lg hover:bg-zinc-600 transition-colors w-full sm:w-auto">
+                    <a href="#contact" class="bg-slate-200 text-slate-800 font-semibold py-3 px-6 rounded-lg hover:bg-slate-300 transition-colors w-full sm:w-auto">
                         Get a Quote
                     </a>
                 </div>
@@ -96,20 +96,20 @@
         </section>
 
         <!-- Services Section -->
-        <section id="services" class="py-16 sm:py-20 bg-zinc-900/50">
+        <section id="services" class="py-16 sm:py-20 bg-slate-100">
             <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
                 <div class="text-center">
-                    <h2 class="text-3xl font-bold tracking-tight text-white sm:text-4xl">Aerial Services</h2>
-                    <p class="mt-4 text-lg text-zinc-400">Showcase your property or project from a stunning new perspective.</p>
+                    <h2 class="text-3xl font-bold tracking-tight text-slate-900 sm:text-4xl">Aerial Services</h2>
+                    <p class="mt-4 text-lg text-slate-600">Showcase your property or project from a stunning new perspective.</p>
                 </div>
 
                 <div class="mt-16 max-w-3xl mx-auto">
-                    <div class="bg-zinc-800/50 border border-zinc-700 rounded-2xl p-8 flex flex-col">
-                        <h3 class="text-2xl font-semibold text-white">High-Impact Photography & Videography</h3>
-                        <p class="mt-4 text-zinc-400 flex-grow">I provide a complete aerial media solution to make your project stand out. My professional background ensures every flight is safe, legal, and delivers exceptional results.</p>
+                    <div class="bg-white border border-slate-200 rounded-2xl p-8 flex flex-col shadow-lg">
+                        <h3 class="text-2xl font-semibold text-slate-900">High-Impact Photography & Videography</h3>
+                        <p class="mt-4 text-slate-600 flex-grow">I provide a complete aerial media solution to make your project stand out. My professional background ensures every flight is safe, legal, and delivers exceptional results.</p>
                         <div class="mt-6">
-                            <h4 class="font-medium text-white">Ideal For:</h4>
-                            <ul class="mt-2 space-y-2 text-zinc-400 list-disc list-inside">
+                            <h4 class="font-medium text-slate-900">Ideal For:</h4>
+                            <ul class="mt-2 space-y-2 text-slate-600 list-disc list-inside">
                                 <li>**Real Estate Agents & Developers:** Attract more buyers with breathtaking aerial photos and cinematic video tours of your listings.</li>
                                 <li>**Construction Progress Monitoring:** Keep stakeholders informed with weekly or bi-weekly visual updates of your job site.</li>
                                 <li>**Marketing & Branding:** Create compelling, high-end content for your website, social media, and advertising campaigns.</li>
@@ -124,39 +124,39 @@
         <section id="drone-portfolio" class="py-16 sm:py-20">
             <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
                  <div class="text-center">
-                    <h2 class="text-3xl font-bold tracking-tight text-white sm:text-4xl">Aerial Portfolio</h2>
-                    <p class="mt-4 text-lg text-zinc-400">Just some of the images I've taken for people.</p>
+                    <h2 class="text-3xl font-bold tracking-tight text-slate-900 sm:text-4xl">Aerial Portfolio</h2>
+                    <p class="mt-4 text-lg text-slate-600">Just some of the images I've taken for people.</p>
                 </div>
                 <div class="mt-16 flex flex-wrap justify-center gap-4 sm:gap-6">
                     <!-- IMPORTANT: Replace the 'src' in each 'img' tag with the path to your actual photo files. -->
-                    <div class="overflow-hidden rounded-xl w-full max-w-md sm:w-[48%] lg:w-[31%]"><img src="Sun Set Shot.jpg" alt="Aerial view of a neighborhood at sunset" class="gallery-img w-full h-full"></div>
-                    <div class="overflow-hidden rounded-xl w-full max-w-md sm:w-[48%] lg:w-[31%]"><img src="Mema's House Shot.jpg" alt="Aerial shot of a large, historic-style home surrounded by trees" class="gallery-img w-full h-full"></div>
-                    <div class="overflow-hidden rounded-xl w-full max-w-md sm:w-[48%] lg:w-[31%]"><img src="Gerry's Neighborhood Shot.jpg" alt="Aerial view of a suburban neighborhood with waterfront homes" class="gallery-img w-full h-full"></div>
-                    <div class="overflow-hidden rounded-xl w-full max-w-md sm:w-[48%] lg:w-[31%]"><img src="Friends House Shot.jpg" alt="Aerial view of a waterfront property on a large lake" class="gallery-img w-full h-full"></div>
-                    <div class="overflow-hidden rounded-xl w-full max-w-md sm:w-[48%] lg:w-[31%]"><img src="Surround Shot.jpg" alt="Panoramic aerial shot of a coastal town" class="gallery-img w-full h-full"></div>
+                    <div class="overflow-hidden rounded-xl w-full max-w-md sm:w-[48%] lg:w-[31%] shadow-lg"><img src="Sun Set Shot.jpg" alt="Aerial view of a neighborhood at sunset" class="gallery-img w-full h-full"></div>
+                    <div class="overflow-hidden rounded-xl w-full max-w-md sm:w-[48%] lg:w-[31%] shadow-lg"><img src="Mema's House Shot.jpg" alt="Aerial shot of a large, historic-style home surrounded by trees" class="gallery-img w-full h-full"></div>
+                    <div class="overflow-hidden rounded-xl w-full max-w-md sm:w-[48%] lg:w-[31%] shadow-lg"><img src="Gerry's Neighborhood Shot.jpg" alt="Aerial view of a suburban neighborhood with waterfront homes" class="gallery-img w-full h-full"></div>
+                    <div class="overflow-hidden rounded-xl w-full max-w-md sm:w-[48%] lg:w-[31%] shadow-lg"><img src="Friends House Shot.jpg" alt="Aerial view of a waterfront property on a large lake" class="gallery-img w-full h-full"></div>
+                    <div class="overflow-hidden rounded-xl w-full max-w-md sm:w-[48%] lg:w-[31%] shadow-lg"><img src="Surround Shot.jpg" alt="Panoramic aerial shot of a coastal town" class="gallery-img w-full h-full"></div>
                 </div>
             </div>
         </section>
 
         <!-- About / Credentials Section -->
-        <section id="about" class="bg-zinc-900/50 py-16 sm:py-20">
+        <section id="about" class="bg-slate-100 py-16 sm:py-20">
              <div class="max-w-4xl mx-auto text-center px-4 sm:px-6 lg:px-8">
-                <h2 class="text-3xl font-bold tracking-tight text-white sm:text-4xl">A Professional You Can Trust</h2>
-                <p class="mt-4 text-lg text-zinc-400 max-w-2xl mx-auto">
+                <h2 class="text-3xl font-bold tracking-tight text-slate-900 sm:text-4xl">A Professional You Can Trust</h2>
+                <p class="mt-4 text-lg text-slate-600 max-w-2xl mx-auto">
                    I combine technical expertise with a commitment to quality and safety. My background ensures your project is in reliable hands.
                 </p>
                 <div class="mt-12 grid grid-cols-1 sm:grid-cols-3 gap-8 text-center">
-                    <div class="bg-zinc-800/50 p-6 rounded-xl">
-                        <h3 class="font-semibold text-white text-xl">Formerly at DroneUp</h3>
-                        <p class="text-zinc-400 mt-2">Professional experience as a UAS Flight Operator for a major national drone services company, including intensive safety and operations training.</p>
+                    <div class="bg-white p-6 rounded-xl shadow-md">
+                        <h3 class="font-semibold text-slate-900 text-xl">Formerly at DroneUp</h3>
+                        <p class="text-slate-600 mt-2">Professional experience as a UAS Flight Operator for a major national drone services company, including intensive safety and operations training.</p>
                     </div>
-                     <div class="bg-zinc-800/50 p-6 rounded-xl">
-                        <h3 class="font-semibold text-white text-xl">FAA Part 107 Certified</h3>
-                        <p class="text-zinc-400 mt-2">Fully licensed by the FAA for commercial drone operations, ensuring all flights are legal, safe, and compliant.</p>
+                     <div class="bg-white p-6 rounded-xl shadow-md">
+                        <h3 class="font-semibold text-slate-900 text-xl">FAA Part 107 Certified</h3>
+                        <p class="text-slate-600 mt-2">Fully licensed by the FAA for commercial drone operations, ensuring all flights are legal, safe, and compliant.</p>
                     </div>
-                     <div class="bg-zinc-800/50 p-6 rounded-xl">
-                        <h3 class="font-semibold text-white text-xl">CompTIA ITF+ Certified</h3>
-                        <p class="text-zinc-400 mt-2">Certified in IT fundamentals, validating a strong understanding of data management, security, and technology systems.</p>
+                     <div class="bg-white p-6 rounded-xl shadow-md">
+                        <h3 class="font-semibold text-slate-900 text-xl">CompTIA ITF+ Certified</h3>
+                        <p class="text-slate-600 mt-2">Certified in IT fundamentals, validating a strong understanding of data management, security, and technology systems.</p>
                     </div>
                 </div>
             </div>
@@ -165,12 +165,12 @@
         <!-- Contact Section -->
         <section id="contact" class="py-16 sm:py-20">
             <div class="max-w-4xl mx-auto text-center px-4 sm:px-6 lg:px-8">
-                <h2 class="text-3xl font-bold tracking-tight text-white sm:text-4xl">Let's Work Together</h2>
-                <p class="mt-4 text-lg text-zinc-400 max-w-2xl mx-auto">
+                <h2 class="text-3xl font-bold tracking-tight text-slate-900 sm:text-4xl">Let's Work Together</h2>
+                <p class="mt-4 text-lg text-slate-600 max-w-2xl mx-auto">
                     Ready to showcase your project from a new perspective? Contact me today for a free quote and consultation.
                 </p>
                 <div class="mt-10">
-                    <a href="mailto:mbwservicesllc@gmail.com" class="inline-block bg-orange-600 text-white font-semibold py-3 px-8 rounded-lg hover:bg-orange-700 transition-colors">
+                    <a href="mailto:mbwservicesllc@gmail.com" class="inline-block bg-sky-600 text-white font-semibold py-3 px-8 rounded-lg hover:bg-sky-700 transition-colors shadow-lg shadow-sky-500/20">
                         mbwservicesllc@gmail.com
                     </a>
                 </div>
@@ -179,8 +179,8 @@
     </main>
 
     <!-- Footer -->
-    <footer class="border-t border-zinc-800">
-        <div class="max-w-7xl mx-auto py-6 px-4 sm:px-6 lg:px-8 text-center text-zinc-500">
+    <footer class="border-t border-slate-200">
+        <div class="max-w-7xl mx-auto py-6 px-4 sm:px-6 lg:px-8 text-center text-slate-500">
             <p>&copy; 2025 Matthew Walker. All rights reserved.</p>
         </div>
     </footer>
