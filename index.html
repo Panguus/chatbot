@@ -32,14 +32,14 @@
 </head>
 <body class="antialiased">
 
-    <!-- Header -->
     <header class="bg-white/80 backdrop-blur-sm sticky top-0 z-50 border-b border-slate-200">
         <nav class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="flex items-center justify-between h-16">
                 <div class="flex items-center">
-                    <a href="#" class="text-xl font-bold gradient-text">Matthew Walker</a>
+                    <a href="#" class="text-xl font-bold">
+                        <img src="logo.png" alt="Matthew Walker Aerial Media Logo" class="h-8 md:h-9">
+                    </a>
                 </div>
-                <!-- Desktop Menu -->
                 <div class="hidden md:block">
                     <div class="ml-10 flex items-baseline space-x-4">
                         <a href="#services" class="text-slate-600 hover:bg-slate-100 hover:text-slate-900 px-3 py-2 rounded-md text-sm font-medium">Services</a>
@@ -48,7 +48,6 @@
                         <a href="#contact" class="text-slate-600 hover:bg-slate-100 hover:text-slate-900 px-3 py-2 rounded-md text-sm font-medium">Contact</a>
                     </div>
                 </div>
-                <!-- Mobile Menu Button -->
                 <div class="md:hidden">
                     <button id="mobile-menu-button" class="inline-flex items-center justify-center p-2 rounded-md text-slate-500 hover:text-slate-900 hover:bg-slate-100 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-offset-slate-100 focus:ring-sky-500">
                         <span class="sr-only">Open main menu</span>
@@ -62,7 +61,6 @@
                 </div>
             </div>
         </nav>
-        <!-- Mobile Menu -->
         <div class="md:hidden hidden" id="mobile-menu">
             <div class="px-2 pt-2 pb-3 space-y-1 sm:px-3">
                 <a href="#services" class="mobile-menu-link text-slate-700 hover:bg-slate-200 hover:text-slate-900 block px-3 py-2 rounded-md text-base font-medium">Services</a>
@@ -73,9 +71,7 @@
         </div>
     </header>
 
-    <!-- Main Content -->
     <main>
-        <!-- Hero Section -->
         <section id="hero" class="py-16 sm:py-20">
             <div class="max-w-4xl mx-auto text-center px-4 sm:px-6 lg:px-8">
                 <h1 class="text-4xl sm:text-5xl md:text-6xl font-bold tracking-tight text-slate-900">
@@ -95,7 +91,6 @@
             </div>
         </section>
 
-        <!-- Services Section -->
         <section id="services" class="py-16 sm:py-20 bg-slate-100">
             <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
                 <div class="text-center">
@@ -120,7 +115,6 @@
             </div>
         </section>
         
-        <!-- Drone Portfolio Section -->
         <section id="drone-portfolio" class="py-16 sm:py-20">
             <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
                  <div class="text-center">
@@ -128,7 +122,6 @@
                     <p class="mt-4 text-lg text-slate-600">Just some of the images I've taken for people.</p>
                 </div>
                 <div class="mt-16 flex flex-wrap justify-center gap-4 sm:gap-6">
-                    <!-- IMPORTANT: Replace the 'src' in each 'img' tag with the path to your actual photo files. -->
                     <div class="overflow-hidden rounded-xl w-full max-w-md sm:w-[48%] lg:w-[31%] shadow-lg"><img src="Sun Set Shot.jpg" alt="Aerial view of a neighborhood at sunset" class="gallery-img w-full h-full"></div>
                     <div class="overflow-hidden rounded-xl w-full max-w-md sm:w-[48%] lg:w-[31%] shadow-lg"><img src="Mema's House Shot.jpg" alt="Aerial shot of a large, historic-style home surrounded by trees" class="gallery-img w-full h-full"></div>
                     <div class="overflow-hidden rounded-xl w-full max-w-md sm:w-[48%] lg:w-[31%] shadow-lg"><img src="Gerry's Neighborhood Shot.jpg" alt="Aerial view of a suburban neighborhood with waterfront homes" class="gallery-img w-full h-full"></div>
@@ -138,7 +131,6 @@
             </div>
         </section>
 
-        <!-- About / Credentials Section -->
         <section id="about" class="bg-slate-100 py-16 sm:py-20">
              <div class="max-w-4xl mx-auto text-center px-4 sm:px-6 lg:px-8">
                 <h2 class="text-3xl font-bold tracking-tight text-slate-900 sm:text-4xl">A Professional You Can Trust</h2>
@@ -162,7 +154,6 @@
             </div>
         </section>
 
-        <!-- Contact Section -->
         <section id="contact" class="py-16 sm:py-20">
             <div class="max-w-4xl mx-auto text-center px-4 sm:px-6 lg:px-8">
                 <h2 class="text-3xl font-bold tracking-tight text-slate-900 sm:text-4xl">Let's Work Together</h2>
@@ -178,7 +169,6 @@
         </section>
     </main>
 
-    <!-- Footer -->
     <footer class="border-t border-slate-200">
         <div class="max-w-7xl mx-auto py-6 px-4 sm:px-6 lg:px-8 text-center text-slate-500">
             <p>&copy; 2025 Matthew Walker. All rights reserved.</p>
@@ -222,4 +212,3 @@
 
 </body>
 </html>
-
